@@ -1,0 +1,33 @@
+
+
+<div class="container">
+
+    <form [formGroup]="editarForm"  (ngSubmit)="$event">
+            <div class="form-group">
+                    <label for="exampleFormControlInput1">ID</label>
+                    <input type="text" class="form-control"  placeholder="ID de evento" formControlName="idEvento" readonly>
+            </div>
+            <div class="form-group">
+                    <label for="exampleFormControlInput1">Nombre Evento</label>
+                    <input type="text" class="form-control"  placeholder="Nombre" formControlName="nombreEvento">
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="exampleFormControlInput1">Fecha Evento (AAAA-MM-DD)</label>
+                        <input type="text" class="form-control"  placeholder=" AAAA-MM-DD" formControlName="fechaEvento">     
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlInput1">Lugar Evento</label>
+                        <input type="text" class="form-control"  placeholder="Lugar" formControlName="lugarEvento">     
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlInput1">Capacidad Evento</label>
+                        <input type="text" class="form-control"  placeholder="Capacidad" formControlName="capacidadEvento">     
+                    </div>
+                </div>
+                <br><br>
+                <button type="submit" class="btn btn-primary" (click)="putForm(editarForm.value)">Guardar</button>
+                <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+                <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+                
+    </form>

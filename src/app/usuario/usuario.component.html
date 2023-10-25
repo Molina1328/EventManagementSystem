@@ -1,0 +1,30 @@
+
+<div class="container"> 
+  <h3>Lista de Usuarios</h3>
+  <button type="button" class="btn btn-primary" (click)="nuevoUsuario()">Nuevo Usuario</button>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">email</th>
+        <th scope="col">telefono</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuarios of usuarios" (click)="editarUsuario(usuarios.idUsuario)">
+        <th scope="row">{{usuarios.idUsuario}}</th>
+        <td>{{usuarios.nombreUsuario}}</td>
+        <td>{{usuarios.emailUsuario}}</td>
+        <td>{{usuarios.telefono}}</td>
+      </tr>
+      <tr>
+       
+      </tr>
+      <tr>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>

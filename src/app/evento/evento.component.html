@@ -1,0 +1,32 @@
+<div class="container">
+  <h3>Lista de Eventos</h3>
+  <button type="button" class="btn btn-primary" (click)="nuevoEvento()">Nuevo Evento</button>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha (AAAA-MM-DD)</th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Capacidad</th>
+    
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of evento" (click)="editarEvento(evento.idEvento)">
+        <th scope="row">{{evento.idEvento}}</th>
+        <td>{{evento.nombreEvento}} </td>
+        <td>{{evento.fechaEvento}} </td>
+        <td>{{evento.lugarEvento}} </td>
+        <td>{{evento.capacidadEvento}} </td>
+
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

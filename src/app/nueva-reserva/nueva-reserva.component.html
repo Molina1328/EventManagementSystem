@@ -1,0 +1,45 @@
+<div class="container">
+
+    <form [formGroup]="nuevoForm" (ngSubmit)="$event">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">ID</label>
+            <input type="text" class="form-control" placeholder="ID de reservacion" formControlName="idReservacion"
+                readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Usuario ID </label>
+            <input type="text" class="form-control" placeholder="usuarioId" formControlName="usuarioId">
+
+            <label for="exampleFormControlInput1">Evento ID</label>
+            <input type="select" class="form-control" placeholder="EVENTO ID" formControlName="eventoId">
+
+
+            <label for="exampleFormControlInput1">Num Asistentes</label>
+            <input type="text" class="form-control" placeholder="Número de asistentes" formControlName="numAsistentes">
+
+
+            <label for="exampleFormControlInput1">Estado</label>
+            <input type="text" class="form-control" placeholder="Estado reserva" formControlName="estado">
+
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Fecha Creacion (AAAA-MM-DD) </label>
+                <input type="text" class="form-control" placeholder="Fecha" formControlName="fechaCreacion">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Pago</label>
+                <input type="text" class="form-control" placeholder="Pago" formControlName="pago">
+            </div>
+
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary" (click)="postForm(nuevoForm.value)">Guardar</button>
+
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+
+    </form>
+
+</div>

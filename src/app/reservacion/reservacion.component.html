@@ -1,0 +1,35 @@
+<div class="container">
+  <h3>Lista de Reserva</h3>
+  <button type="button" class="btn btn-primary" (click)="nuevoReserva()">Nuevo Reserva</button>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Evento</th>
+        <th scope="col">Numero de asistentes</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Fecha (AAAA-MM-DD)</th>
+        <th scope="col">Pago</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reserva of reserva" (click)="editarReserva(reserva.idReservacion)">
+        <th scope="row">{{reserva.idReservacion}}</th>
+        <td>{{reserva.usuarioId}} </td>
+        <td>{{reserva.eventoId}} </td>
+        <td>{{reserva.numAsistentes}} </td>
+        <td>{{reserva.estado}} </td>
+        <td>{{reserva.fechaCreacion}} </td>
+        <td>{{reserva.pago}} </td>
+
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
